@@ -973,9 +973,9 @@ footer.entry-meta .meta-in {
   border: 1px solid #fff;
   border-radius:50%;
   position: absolute;
-  transition-duration: 200ms;
+  transition-duration: 0ms;
   transition-timing-function: ease-out;
-  animation: cursorAnim. 5s infinite alternate;
+  animation: cursorAnim. 0s infinite alternate;
   transform: translate(-50%, -50%); position: fixed;
 }
 .cursor::after{
@@ -988,7 +988,7 @@ footer.entry-meta .meta-in {
   opacity: .5;
   top:0px;
   left: 0px;
-  animation: cursonAnim2 .5s infinite alternate;
+  animation: cursonAnim2 .0s infinite alternate;
 
 }
 @keyframes cursorAnim{
