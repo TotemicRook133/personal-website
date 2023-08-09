@@ -1,3 +1,25 @@
+function detectDeviceType() {
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	return isMobile ? 'mobile' : 'desktop';
+}
+
+  // Function to show/hide the calibration message and block content based on the device type
+function handleDeviceType() {
+	var messageElement = document.getElementById('calibrationMessage');
+	var contentElement = document.querySelector('.contento');
+	var deviceType = detectDeviceType();
+
+	if (deviceType === 'mobile') {
+	  messageElement.style.display = 'block';
+	  contentElement.style.display = 'none';
+	} else {
+	  messageElement.style.display = 'none';
+	  contentElement.style.display = 'block';
+	}
+}
+
+  // Call the handleDeviceType function on page load
+handleDeviceType();
 const backToTopButton  =document.querySelector("#back-to-top-btn");
 window.addEventListener("scroll", scrollFunction);
 function scrollFunction(){
@@ -8,6 +30,109 @@ function scrollFunction(){
 		backToTopButton.style.display='none';
 	}
 }
+// Helper function to check if an element is in the viewport
+function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle scroll event
+function handleScroll() {
+    var lkow = document.querySelector('.lkow');
+    if (isElementInViewport(lkow)) {
+        lkow.classList.add('show');
+    }
+
+    var twak1 = document.querySelectorAll('.twak1');
+    twak1.forEach(function(twak1) {
+        if (isElementInViewport(twak1)) {
+            twak1.classList.add('show');
+        }
+    });
+
+    var tapper1 = document.querySelectorAll('.tapper1');
+    tapper1.forEach(function(tapper1) {
+        if (isElementInViewport(tapper1)) {
+            tapper1.classList.add('show');
+        }
+    });
+	var twak2 = document.querySelectorAll('.twak2');
+    twak2.forEach(function(twak2) {
+        if (isElementInViewport(twak2)) {
+            twak2.classList.add('show');
+        }
+    });
+
+    var tapper2 = document.querySelectorAll('.tapper2');
+    tapper2.forEach(function(tapper2) {
+        if (isElementInViewport(tapper2)) {
+            tapper2.classList.add('show');
+        }
+    });
+	var twak3 = document.querySelectorAll('.twak3');
+    twak3.forEach(function(twak3) {
+        if (isElementInViewport(twak3)) {
+            twak3.classList.add('show');
+        }
+    });
+
+    var tapper3 = document.querySelectorAll('.tapper3');
+    tapper3.forEach(function(tapper3) {
+        if (isElementInViewport(tapper3)) {
+            tapper3.classList.add('show');
+        }
+    });
+	var twak4 = document.querySelectorAll('.twak4');
+    twak4.forEach(function(twak4) {
+        if (isElementInViewport(twak4)) {
+            twak4.classList.add('show');
+        }
+    });
+
+    var tapper4 = document.querySelectorAll('.tapper4');
+    tapper4.forEach(function(tapper4) {
+        if (isElementInViewport(tapper4)) {
+            tapper4.classList.add('show');
+        }
+    });
+	var twak5 = document.querySelectorAll('.twak5');
+    twak5.forEach(function(twak5) {
+        if (isElementInViewport(twak5)) {
+            twak5.classList.add('show');
+        }
+    });
+
+    var tapper5 = document.querySelectorAll('.tapper5');
+    tapper5.forEach(function(tapper5) {
+        if (isElementInViewport(tapper5)) {
+            tapper5.classList.add('show');
+        }
+    });
+	var twak6 = document.querySelectorAll('.twak6');
+    twak6.forEach(function(twak6) {
+        if (isElementInViewport(twak6)) {
+            twak6.classList.add('show');
+        }
+    });
+
+    var tapper6 = document.querySelectorAll('.tapper6');
+    tapper6.forEach(function(tapper6) {
+        if (isElementInViewport(tapper6)) {
+            tapper6.classList.add('show');
+        }
+    });
+}
+
+// Attach scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Initial check on page load
+handleScroll();
 
 backToTopButton.addEventListener('click', backToTop);
 function backToTop() {
